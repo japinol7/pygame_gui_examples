@@ -60,7 +60,7 @@ text_box = pygame_gui.elements.UITextBox(html_text='la la LA LA LAL LAL ALALA'
                                                    'al alalalal lfed alal alal alal al'
                                                    'ala lalalal lasda lal a lalalal slapl'
                                                    'alalala lal la blop lal alal aferlal al',
-                                         relative_rect=pygame.Rect(500, 0, 320, 10),
+                                         relative_rect=pygame.Rect(500, 0, 68, 361),
                                          manager=manager,
                                          wrap_to_height=True)
 
