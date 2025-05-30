@@ -337,7 +337,8 @@
             "shape": "rounded_rectangle",
             "shape_corner_radius": "2",
             "border_width": "2",
-            "shadow_width": "2"
+            "shadow_width": "2",
+            "border_overlap": "0"
         }
     },
     "#2,6":
@@ -351,7 +352,8 @@
             "shape": "rounded_rectangle",
             "shape_corner_radius": "10",
             "border_width": "2",
-            "shadow_width": "2"
+            "shadow_width": "2",
+            "border_overlap": "0"
         }
     },
     "#3,6":
@@ -421,7 +423,8 @@
             "shape": "rounded_rectangle",
             "shape_corner_radius": "2",
             "border_width": "2",
-            "shadow_width": "2"
+            "shadow_width": "2",
+            "border_overlap": "0"
         }
     },
     "#2,7":
@@ -435,7 +438,8 @@
             "shape": "rounded_rectangle",
             "shape_corner_radius": "10",
             "border_width": "2",
-            "shadow_width": "2"
+            "shadow_width": "2",
+            "border_overlap": "0"
         }
     },
     "#3,7":

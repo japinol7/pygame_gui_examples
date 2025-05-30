@@ -23,6 +23,9 @@ def test_app():
     background = Surface((800, 600), depth=32)
     background.fill(Color("#606060"))
 
+    ui_manager.preload_fonts([{'name': 'noto_sans', 'point_size': 14, 'style': 'bold', 'antialiased': '1'},
+                              {'name': 'noto_sans', 'point_size': 14, 'style': 'italic', 'antialiased': '1'}])
+
     text_box = UITextBox(
         html_text="<body><font color=#E0E080>hey hey hey "
                   "what are the <a href=haps>haps</a> my "

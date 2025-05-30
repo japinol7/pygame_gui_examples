@@ -40,13 +40,14 @@ questionnaire = {
 form_test = UIForm(test_rect, questionnaire, manager)
 
 print(form_test.combined_element_ids)
-print(form_test.get_container().combined_element_ids)
+print(form_test.get_container().get_most_specific_combined_id())
 print(form_test.parsed_questionnaire["how about a section?"].combined_element_ids)
-print(
-    form_test.parsed_questionnaire["how about a section?"]
-    .parsed_questionnaire["well, here, section-ception"]
-    .combined_element_ids
-)
+print(form_test.parsed_questionnaire["how about a section?"].main_expand_button.combined_element_ids)
+# print(
+#     form_test.parsed_questionnaire["how about a section?"]
+#     .parsed_questionnaire["well, here, section-ception"]
+#     .combined_element_ids
+# )
 
 
 clock = pygame.time.Clock()

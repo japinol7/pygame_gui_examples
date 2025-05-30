@@ -19,7 +19,7 @@ ui_manager.add_font_paths("PermanentMarker",
 ui_manager.preload_fonts([{'name': 'PermanentMarker', 'point_size': 14, 'style': 'regular'}])
 
 text_box = UITextBox(
-        html_text="My "
+        html_text="<effect id=whole_block>My "
                   "<shadow size=1 color=#553520>"
                   "<font face=PermanentMarker color=#A06545>"
                   "<effect id=test>EARTHQUAKE</effect> "
@@ -28,7 +28,7 @@ text_box = UITextBox(
                   "will <font face=PermanentMarker>"
                   "<effect id=shatter>SHATTER</effect>"
                   "</font>"
-                  " your bones. Puny Mortals.",
+                  " your bones. Puny Mortals.</effect>",
         relative_rect=pygame.Rect(100, 100, 200, 100),
         manager=ui_manager)
 
@@ -58,14 +58,14 @@ while is_running:
 
         if event.type == pygame.KEYDOWN and event.key == pygame.K_s:
             text_box.set_active_effect(pygame_gui.TEXT_EFFECT_TYPING_APPEAR,
-                                       params={'time_per_letter': 0.05,
-                                               'time_per_letter_deviation': 0.02})
+                                       params={'time_per_letter': 0.1,
+                                               'time_per_letter_deviation': 0.2})
 
         if event.type == pygame.KEYDOWN and event.key == pygame.K_f:
             text_box.set_active_effect(pygame_gui.TEXT_EFFECT_TYPING_APPEAR,
                                        params={'time_per_letter': 0.05,
                                                'time_per_letter_deviation': 0.02},
-                                       effect_tag='test')
+                                       effect_tag='whole_block')
 
         if event.type == pygame.KEYDOWN and event.key == pygame.K_g:
             text_box.set_active_effect(pygame_gui.TEXT_EFFECT_FADE_OUT,
@@ -110,10 +110,10 @@ while is_running:
     ui_manager.draw_ui(window_surface)
 
     if debug_chunks:
-        text_box_offset = (text_box.padding[0] + text_box.border_width +
+        text_box_offset = (text_box.padding[0] + text_box.border_width["left"] +
                            text_box.shadow_width +
                            text_box.rounded_corner_width_offsets[0],
-                           text_box.padding[1] + text_box.border_width +
+                           text_box.padding[1] + text_box.border_width["top"] +
                            text_box.shadow_width +
                            text_box.rounded_corner_width_offsets[0])
         for row in text_box.text_box_layout.layout_rows:

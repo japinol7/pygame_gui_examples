@@ -262,7 +262,11 @@ class OptionsUIApp:
 
         self.panel = UIPanel(pygame.Rect(50, 50, 200, 300),
                              starting_height=4,
-                             manager=self.ui_manager)
+                             manager=self.ui_manager,
+                             margins={'left': 25,
+                                      'right': 5,
+                                      'top': 50,
+                                      'bottom': 0})
 
         UIButton(pygame.Rect(10, 10, 174, 30), 'Panel Button',
                  manager=self.ui_manager,
